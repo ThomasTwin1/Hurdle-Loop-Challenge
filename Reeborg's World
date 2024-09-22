@@ -1,0 +1,24 @@
+#complete this challenge using the website below:
+#https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json
+def run_jump():
+    move()
+    turn_left()
+    move()
+    
+def clear_hurdle():
+    for _ in range(3):
+        turn_left()
+    move()
+    for _ in range(3):
+        turn_left()
+        
+def descend_down():
+    move()
+    turn_left()
+    
+def jump():
+    for _ in range(6):
+        run_jump()
+        clear_hurdle()
+        descend_down()
+jump()
